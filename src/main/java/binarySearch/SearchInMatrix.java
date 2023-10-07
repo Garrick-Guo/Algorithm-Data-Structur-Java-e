@@ -48,3 +48,5 @@ public class SearchInMatrix {
         return new int[]{-1, -1};
     }
 }
+//TC: log(m * n)
+//SC: 1
