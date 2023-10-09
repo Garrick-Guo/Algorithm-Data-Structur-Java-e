@@ -29,6 +29,7 @@ public class ClassicBinary {
         System.out.println(Arrays.toString(array1) + " T = " + target1 + "return " + obj.search(array1, target1));
         System.out.println(Arrays.toString(array1) + " T = " + target2 + "return " + obj.search(array1, target2));
         System.out.println(Arrays.toString(array2) + " T = " + target3 + "return " + obj.search(array2, target3));
+
     }
 
     private int search(int[] array, int target) {
