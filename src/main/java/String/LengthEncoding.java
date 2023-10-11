@@ -3,9 +3,8 @@ package String;
 Encoding is performed as follows:
 The string "aaaabbсaa" is converted into "a4b2с1a2", that is,
 the groups of the same characters of the input string are replaced by the symbol and the number of its repetitions in this string.
-
-Write a program, which reads the string, encodes it by this algorithm and outputs the encoded sequence. The encoding must be case sensitive.
-Note, string can contain only a single character.
+example:
+aaaabbcaa to a4b2c1a2
  */
 import java.util.Scanner;
 
