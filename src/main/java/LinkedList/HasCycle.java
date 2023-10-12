@@ -25,3 +25,5 @@ public class HasCycle {
         return false;
     }
 }
+//Time Complexity: O(n)
+//Space Complexity: O(1)
