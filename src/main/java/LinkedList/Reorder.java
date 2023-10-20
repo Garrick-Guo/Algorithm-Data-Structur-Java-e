@@ -10,6 +10,8 @@ L = 1 -> 2 -> 3 -> null, is reordred to 1 -> 3 -> 2 -> null
 public class Reorder {
     public static void main(String[] args) {
         Reorder obj = new Reorder();
+        ListNode head = ListNode.arrayToListNode(new int[]{1,2,3,4,5,6,7,8,9,10});
+        ListNode.displayListNode(obj.reorder(head));
 
     }
     private ListNode reorder(ListNode head) {
@@ -19,9 +21,10 @@ public class Reorder {
         ListNode one = head;
         ListNode middle = findMiddle(head);
         ListNode two = reverse(middle.next);
+        middle.next = null;
         return meger(one, two);
     }
-    }private ListNode findMiddle(ListNode head) {
+    private ListNode findMiddle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while(fast.next != null && fast.next.next != null) {
