@@ -34,4 +34,6 @@ public class Partition {
         curSmall.next = large.next;
         return small.next;
     }
+    //Time complexity = O(n)
+    //space Complexity = O(1)
 }
