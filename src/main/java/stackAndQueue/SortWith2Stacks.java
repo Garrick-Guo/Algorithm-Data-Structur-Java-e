@@ -23,7 +23,9 @@ public class SortWith2Stacks {
         stack1.add(0);
         stack1.add(4);
         obj.sort(stack1);
-
+        while (!stack1.isEmpty()) {
+            System.out.println(stack1.pollFirst());
+        }
     }
     private void sort(Deque<Integer> stack1) {
         if (stack1 == null || stack1.size() <= 1) {
@@ -48,8 +50,18 @@ public class SortWith2Stacks {
                 buffer.offerFirst(cur);
             }
             while (!buffer.isEmpty() && buffer.peekFirst() >= curMin) {
-                2
+                int temp = buffer.pollFirst();
+                if (temp != curMin) {
+                    input.offerFirst(temp);
+                }
             }
+            while (count != 0) {
+                buffer.offerFirst(curMin);
+                count--;
+            }
+        }
+        while (!buffer.isEmpty()) {
+            input.offerFirst(buffer.pollFirst());
         }
     }
 }
